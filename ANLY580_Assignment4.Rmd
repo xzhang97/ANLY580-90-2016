@@ -1,0 +1,66 @@
+---
+title: "Data Vis Beastiary"
+author: "ANLY 580"
+date: "May 10, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Objectives
+
+This assigment will help you familiarize yourself with the process of writing reproducible code and with sharing that code through a social portal such as GitHub.  
+
+Your code is (theoretically) because the assignment was due last week.  Since then you were asked to setup a GitHub account.  Now you will use that account to add your code to this repo.  
+
+Your tasks are:
+- Fork the repo to your local machine
+- Add your code below your name
+- Add some description of the vis and the data set above your graphic
+- Test your code on your local machine to verify execution
+- Create a pull request to submit your code to the master branch
+
+No doubt this will require some reading and thoughtful research on your part.  A great source of information can be found at http://kbroman.org/github_tutorial/
+
+
+
+
+## Kevin Purcell (Instructor)
+
+A *treemap* is a visual representation of a hierarchical (tree-like) dataset.  In which each branch of hierarchy is represented by rectangle.  The appearence of the treemap (size & color of rectangles) is scaled in relation to one or multiple varibles in the dataset.
+
+Below is my example of a vis created with the `treemap` package using the `GNI2014` dataset, which is a listing of Gross Domestic Income in USD.
+
+
+```{r, echo=TRUE}
+library(treemap)   # Loading the treemap library
+data(GNI2014)      # Included dataset on Gross National Income levels
+treemap(GNI2014,                     # data frme
+       index=c("continent", "iso3"), # a vector of aggregation indices from df
+       vSize="population",           # identify the column that defines size
+       vColor="GNI",                 # second vector to map to color
+       type="value",                 # a type (7 choices)
+       title="Gross National Income (per captia) in USD in 2014")
+```
+
+
+## Olayemi	Adejumo
+## Isaac	Cyril
+## Ying	Dong
+## Rui	Fan
+## Sukanyaraj	Govindaraaj
+## Kan	Hui
+## Muhammad	Huzaifa
+## Xinyi	Li
+## Shen	Liu
+## Vishwanath Kuma	Maharajapuram Ramachandran
+## Jai	Rajora
+## Yuanhui	Sui
+## Shanfeng	Tang
+## Russell	Taylor
+## Gokul Krishna	Turaga
+## Bongyong	Uh
+## Xinting	Zhang
+## Sicong	Zheng
