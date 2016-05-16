@@ -48,6 +48,21 @@ treemap(GNI2014,                     # data frme
 
 ## Olayemi	Adejumo
 ## Isaac	Cyril
+
+Below is my example with four box plots using the `iris` dataset, which gives the measurements in centimeters of the variables sepal length and width and petal length and width, respectively, for 50 flowers from each of 3 species of iris. The species are Iris setosa, versicolor, and virginica. 
+
+
+```{r, echo=TRUE}
+
+data("iris") #loading iris data
+par(mfrow=c(2,2)) #Creating a matrix 2 rows and 2 columns
+boxplot(iris$Sepal.Length,col="red") #Box plot of the sepal length in red
+boxplot(iris$Sepal.Length~iris$Species,col="red") #Box plot of sepal length and species in red
+boxplot(iris$Sepal.Length~iris$Species,col=heat.colors(3)) #Box plots with three heat colors
+boxplot(iris$Sepal.Length~iris$Species,col=topo.colors(3)) #Box plots with three topo colors
+
+```
+
 ## Ying	Dong
 ## Rui	Fan
 ## Sukanyaraj	Govindaraaj
