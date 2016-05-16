@@ -106,6 +106,16 @@ acmeNetwork <- ToDataFrameNetwork(acme, "name") #Transform into frame network
 simpleNetwork(acmeNetwork[-3], fontSize = 12) #Plot and settings
 ```
 ## Shen	Liu
+This is the example to use ggplot2, which is one decent tool in R to visualize the dataset. In following example, we use dataset airquality to explore the relationship between ozone content and temperature.
+```{r,echo=TRUE}
+   data11 <- data.frame(airquality) #get data
+   ggplot(data11, aes(x = Temp, y = Ozone)) + #draw plot as Temp for independent variable and Ozone for dependent Var.
+   geom_point(shape = 1) + #point shape
+   geom_smooth(method = "lm", formula = y~x, se = FALSE, colour = "black") +   #linear regression
+   labs(x = "Temp", y = "Ozone") + #axis title
+   ggtitle("Relationship Between Temp and Ozone") + #graph title
+   theme_bw() 
+```
 ## Vishwanath Kuma	Maharajapuram Ramachandran
 ## Jai	Rajora
 ## Yuanhui	Sui
