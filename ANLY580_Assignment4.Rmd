@@ -67,6 +67,28 @@ boxplot(iris$Sepal.Length~iris$Species,col=topo.colors(3)) #Box plots with three
 ## Rui	Fan
 ## Sukanyaraj	Govindaraaj
 ## Kan	Hui
+
+A *rUnemploymentData* contains data and visualization functions for USA unemployment data from 2000 to 2013. Data comes from the US Bureau of Labor Statistics.
+
+Below is my example of a vis created with the `rUnemploymentData` package using the `df_state_unemployment` dataset, which is a distribution of unemployment rate in 10 States of the U.S.
+```{r, echo=TRUE,fig.width=10}
+library(rUnemploymentData)   #load rUnemploymentData library
+library(reshape)             #load reshape library
+library(ggplot2)            #load ggplot2 library
+
+data(df_state_unemployment)
+
+pick<-sort(sample(51,10)) 
+db3<-melt(df_state_unemployment[pick,c(1,10:15)],
+          id="region")                       #manipulate data and pick 10 states out of 51 states
+colnames(db3)<-c("Region","Year","Rate")     #rename the column names
+
+ggplot(data = db3, aes(Region,Rate))+ 
+  geom_boxplot(colour="blue")+               #apply ggplot function with box plot
+  geom_jitter(aes(colour=Year,shape=Year))+  #add jitter
+  ggtitle("Unemployment Rate distribution in 10 States of U.S.after the Financial Crisis")   #add title
+```
+
 ## Muhammad	Huzaifa
 ## Xinyi	Li
 
