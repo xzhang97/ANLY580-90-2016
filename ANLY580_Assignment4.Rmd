@@ -124,4 +124,11 @@ This is the example to use ggplot2, which is one decent tool in R to visualize t
 ## Gokul Krishna	Turaga
 ## Bongyong	Uh
 ## Xinting	Zhang
+
+This plot is a simple scatter plot of exchange rate of Euro to other currency
+```{r}
+library(RColorBrewer)
+data(euro) #Data set
+plot(euro,    #Scatter plot
+     col=brewer.pal(5,"Set1")) #Define the color
 ## Sicong	Zheng
