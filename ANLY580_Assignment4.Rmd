@@ -36,7 +36,7 @@ Below is my example of a vis created with the `treemap` package using the `GNI20
 
 ```{r, echo=TRUE}
 library(treemap)   # Loading the treemap library
-data(GNI2014)      # Included dataset on Gross National Income levels
+data(GNI2014)      # Included dataset on Gross Nationaok
 treemap(GNI2014,                     # data frme
        index=c("continent", "iso3"), # a vector of aggregation indices from df
        vSize="population",           # identify the column that defines size
